@@ -1,6 +1,25 @@
-let color = '#3aa757';
+{
+  const saveDefault = () => {
+    return new Promise((resolve, _reject) => {
+      chrome.storage.sync.set({
+        name: "foo",
+        email: "foo@example.com",
+      }, () => {
+        resolve();
+      });
+    });
+  }
+  const loadData = () => {
+    return new Promise((resolve, _reject) => {
+      chrome.storage.sync.get(null, (items) => {
+        resolve(items);
+      });
+    })
+  };
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.sync.set({ color });
-  console.log('Default background color set to %cgreen', `color: ${color}`);
-});
+  chrome.runtime.onInstalled.addListener(async () => {
+    await saveDefault();
+    const items = await loadData();
+    console.error(JSON.stringify(items));
+  });
+}
