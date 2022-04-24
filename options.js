@@ -8,14 +8,6 @@
   document.getElementById("save")
     .addEventListener("click", handleButtonClick);
 
-  const loadData = async function() {
-    const data = await chrome.storage.sync.get(null);
-    Object.entries(data).forEach(([key, value]) => {
-      const $elem = document.body.querySelector(`input[name='${key}']`);
-      if ($elem != null) {
-        $elem.value = value;
-      }
-    });
-  };
-  await loadData();
+  // @see utils.js
+  await fillOutInformation();
 })();
