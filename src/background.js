@@ -1,3 +1,1 @@
-{
-  // Do nothing so far
-}
+// Nothing to do for now
