@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="../../dist/output.css" rel="stylesheet">
+</head>
+
+<body style="width: 240px; height: 360px;">
+  <div class="w-full h-full bg-gray-100 grid flex-col p-4 content-between text-center">
+    <h1 class="text-2xl font-bold text-sky-500">
+      Fill Form
+    </h1>
+
+    <div class="text-left">
+      <label class="block">
+        <span class="form-label">Name: *</span>
+        <input type="text" name="name" class="text-field">
+      </label>
+
+      <label class="block mt-4">
+        <span class="form-label">E-mail: *</span>
+        <input type="text" name="email" class="text-field">
+      </label>
+
+      <label class="block mt-4">
+        <span class="form-label">Phone: *</span>
+        <input type="text" name="phone" class="text-field">
+      </label>
+    </div>
+
+    <button id="fillInformation" class="fill-button">
+      Fill
+    </button>
+  </div>
+</body>
+
+<script type="module" src="popup.js"></script>
+
+</html>

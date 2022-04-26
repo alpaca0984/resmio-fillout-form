@@ -1,0 +1,27 @@
+{
+  "name": "resmio-fillout-order",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "watch:css": "tailwindcss -i ./extension/src/input.css -o ./extension/dist/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alpaca0984/resmio-fillout-form.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alpaca0984/resmio-fillout-form/issues"
+  },
+  "homepage": "https://github.com/alpaca0984/resmio-fillout-form#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}

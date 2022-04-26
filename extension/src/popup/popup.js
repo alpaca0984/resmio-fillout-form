@@ -9,10 +9,12 @@ async function save() {
 
 async function fillOut(fields = fieldNames) {
   const data = await chrome.storage.sync.get(fields);
+  const inputEvent = new Event("input");
   Object.entries(data).forEach(([name, value]) => {
     const $elem = document.body.querySelector(`input[name='${name}']`);
     if ($elem != null) {
       $elem.value = value;
+      $elem.dispatchEvent(inputEvent);
     }
   });
 }
